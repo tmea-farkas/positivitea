@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
     'back_profiles',
     'back_posts',
+    'back_comments',
 ]
 
 MIDDLEWARE = [
