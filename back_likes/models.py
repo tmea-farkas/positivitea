@@ -14,8 +14,8 @@ class Like(models.Model):
 
     class Meta:
         ordering = ['-created_at']
-        unique_together = ('owner', 'post')
-        #to ensure the user can only like a post or comment once
+        unique_together = ['owner', 'post']
+        #to ensure the user can only like a post once
         
         
     
