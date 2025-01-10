@@ -25,4 +25,5 @@ urlpatterns = [
     path('', include('back_likes.urls')),
     path('', include('back_followers.urls')),
     path('', include('back_chatroom.urls')),
+    path('', include('back_messages.urls')),
 ]

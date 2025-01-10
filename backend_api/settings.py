@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'rest_framework',
+    'channels',
 
     'back_profiles',
     'back_posts',
@@ -88,6 +89,8 @@ TEMPLATES = [
         },
     },
 ]
+
+ASGI_APPLICATION = 'backend_api.asgi.application'
 
 WSGI_APPLICATION = 'backend_api.wsgi.application'
 
