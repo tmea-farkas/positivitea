@@ -16,8 +16,8 @@ class Message(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     is_edited = models.BooleanField(default=False)
     is_deleted = models.BooleanField(default=False)
-    attachment = models.FileField(
-        upload_to='chatroom_attachments/', blank=True, null=True
+    image = models.ImageField(
+        upload_to='chatroom_images/', blank=True, null=True
     )
 
     class Meta:

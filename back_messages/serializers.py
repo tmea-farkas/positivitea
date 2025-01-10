@@ -20,11 +20,30 @@ class MessageSerializer(serializers.ModelSerializer):
             )
         return value
 
+    def validate_image(self, value):
+        if value is None:
+            return value
+    
+        if value.size > 1024 * 1024 *2:
+            raise serializers.ValidationError(
+                'Image size larger than 2MB!'
+            )
+        
+        valid_extensions = ['jpg', 'jpeg', 'png', 'gif']
+        ext = value.name.split('.')[-1].lower()
+        if ext not in valid_extensions:
+            raise serializers.ValidationError(
+                'Unsupported file format.'
+                'Only JPG, JPEG, PNG, and GIF are allowed.'
+            )
+
+        return value
+
     class Meta:
         model = Message
         fields = [
             'id', 'chatroom', 'owner', 'is_owner',
-            'content', 'created_at', 'updated_at'
+            'content', 'image', 'created_at', 'updated_at'
         ]
         read_only_fields = ['created_at', 'updated_at']
 
