@@ -63,7 +63,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['.gitpod.io', 'positivi-tea.herokuapp.com']
+ALLOWED_HOSTS = ['.gitpod.io', '.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-tmeafarkas-positivitea-z1smdflff8o.ws-eu117.gitpod.io']
 # Application definition
