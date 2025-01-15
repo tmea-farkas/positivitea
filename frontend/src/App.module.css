@@ -12,15 +12,33 @@
     box-sizing: border-box;
   }
 
+.Content {
+    background-color: #6d60e7;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #4b4b4d;
+}
+  
+.FillerImage {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+  
+.Image {
+    max-height: 40vh;
+    max-width: 100%;
+    object-fit: contain;
+}
 
 a {
-    color: #686867;
+    color: #fadd36;
     transition: color ease-in-out 0.3s;
 }
   
 a:hover {
     text-decoration: none;
-    color:#074115
+    color:#115c07;
 }
 a:hover i {
     color: #155c07;

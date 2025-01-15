@@ -64,7 +64,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 #DEBUG = 'DEV' in os.environ
 DEBUG = 'DEBUG' in os.environ
 
-ALLOWED_HOSTS = ['.gitpod.io', '.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '.gitpod.io', '.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-tmeafarkas-positivitea-z1smdflff8o.ws-eu117.gitpod.io']
 # Application definition
