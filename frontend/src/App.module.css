@@ -15,7 +15,7 @@
 .Content {
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid #4b4b4d;
+    border: 2px solid #034e25;
 }
   
 .FillerImage {
@@ -45,7 +45,7 @@ a:hover i {
 }
   
 i {
-    color: #585858;
+    color: #fadd36;
     font-size: 1.6rem;
     padding: 7px;
     vertical-align: middle;
