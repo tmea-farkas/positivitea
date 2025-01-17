@@ -29,7 +29,7 @@ const Post = (props) => {
     
     const handleLike = async () => {
         try {
-          const {data} = await axiosRes.post(`/likes/`, {post:id})
+          const {data} = await axiosRes.post(`/likes/`, {post:id});
           setPosts((prevPosts) => ({
             ...prevPosts,
             results: prevPosts.results.map((post) => {
@@ -40,6 +40,22 @@ const Post = (props) => {
           }));
         } catch (err){
             console.log(err);
+        }
+    };
+
+    const handleUnlike = async () => {
+        try {
+          await axiosRes.delete(`/likes/${like_id}/`);
+          setPosts((prevPosts) => ({
+            ...prevPosts,
+            results: prevPosts.results.map((post) => {
+              return post.id === id
+                ? { ...post, likes_count: post.likes_count - 1, like_id: null }
+                : post;
+            }),
+          }));
+        } catch (err) {
+          console.log(err);
         }
     };
 
@@ -71,7 +87,7 @@ const Post = (props) => {
                         <i className='far fa-heart'/>
                     </OverlayTrigger>
                 ) : like_id? (
-                    <span onClick={() => {}}>
+                    <span onClick={handleUnlike}>
                         <i className={`fas fa-heart ${styles.Heart}`}/>
                     </span>
                 ) : currentUser? (
@@ -96,4 +112,4 @@ const Post = (props) => {
     );
 };
 
-export default Post
+export default Post;
