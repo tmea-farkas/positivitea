@@ -28,7 +28,7 @@ const NavBar = () => {
     activeClassName={styles.Active}
     to="/posts/create"
   >
-    <i className="fas fa-plus-square"></i>Add Post
+    <i className="fas fa-plus-square"></i>Spill the Tea!
   </NavLink>
   )
   const loggedInIcons = <>
@@ -37,14 +37,21 @@ const NavBar = () => {
       activeClassName={styles.Active}
       to="/feed"
     >
-      <i className="fas fa-stream"></i>Feed
+      <i className="fas fa-stream"></i>Blend
     </NavLink>
     <NavLink
       className={styles.NavLink}
       activeClassName={styles.Active}
       to="/chatrooms"
     >
-      <i className="fa-solid fa-person-booth"></i>Chatrooms
+      <i className="fa-solid fa-person-booth"></i>TeaRooms
+    </NavLink>
+    <NavLink
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/liked"
+    >
+      <i className="fa-solid fa-mug-hot"></i>Tea-lightful
     </NavLink>
     <NavLink
       className={styles.NavLink}
@@ -57,7 +64,7 @@ const NavBar = () => {
       className={styles.NavLink}
       to={`/profiles/${currentUser?.profile_id}`}
     >
-      <Avatar src={currentUser?.profile_image} text='Profile' height={40}/>
+      <Avatar src={currentUser?.profile_image} text='My Blend' height={40}/>
     </NavLink>
   </>;
   const loggedOutIcons = (
@@ -67,7 +74,7 @@ const NavBar = () => {
     activeClassName={styles.Active}
     to="/signin"
   >
-    <i className="fas fa-sign-in-alt"></i>Sign in
+    <i className="fas fa-sign-in-alt"></i>Re-steep
   </NavLink>
   <NavLink
     to="/register"
