@@ -1,8 +1,11 @@
 .App {
     font-family: "Gabriela";
-    background: linear-gradient(0deg, #074115 3%, #e1eb5b 49%, #ffffff 84%);
+    background: linear-gradient(319deg, #074115 4%, #e1eb5b 67%, #f4f7d1 94%);
     min-height: 100vh;
+    color:#7b020a;
+    
 }
+
 
 .Main {
     padding-top: 81px;
@@ -31,7 +34,7 @@
 }
 
 a {
-    color: #fadd36;
+    color: #7b020a;
     transition: color ease-in-out 0.3s;
 }
   
