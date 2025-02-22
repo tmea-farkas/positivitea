@@ -96,7 +96,7 @@ INSTALLED_APPS = [
     'back_likes',
     'back_followers',
     'back_chatroom',
-    'back_messages',
+'back_messages',
 ]
 
 SITE_ID = 1
@@ -114,7 +114,7 @@ MIDDLEWARE = [
 if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
         os.environ.get('CLIENT_ORIGIN')
-]
+    ]
 
 CORS_ALLOWED_CREDENTIALS = True
 
@@ -156,23 +156,25 @@ else:
         'default':dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME':
+         'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 
+        'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 
+        'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 
+        'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
 
